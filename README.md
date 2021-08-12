@@ -96,7 +96,7 @@ example json data
 
 ```
 
-if success you will get a JSON token 
+if success you will get a JWT token 
 
 ```
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTE0NjU0ZDc3ZjlhNTRlMDBmMDU3NzciLCJuYW1lIjoidGhlYWRtaW4iLCJlbWFpbCI6InJvb3RAZGFzaXRoLndvcmtzIiwiaWF0IjoxNjI4NzI3NjY5fQ.PFJldSFVDrSoJ-Pg0HOxkGjxQ69gxVO2Kjn7ozw9Crg
@@ -128,7 +128,7 @@ GET http://localhost:3000/api/priv
 
 ```
 
-auth-token ( json token got from login ) should be in header 
+auth-token ( JWT token got from login ) should be in header 
 
 ```
 
