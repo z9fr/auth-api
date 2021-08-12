@@ -16,7 +16,7 @@ npm start
 
 ### Register User 
 
-```json
+```
 POST http://localhost:3000/api/user/register
 
 ```
@@ -50,7 +50,7 @@ example json data
 <u> Email Exist  </u>
 
 
-```json
+```
 Email already Exist
 
 ```
@@ -58,7 +58,7 @@ Email already Exist
 <u> Name Exist  </u>
 
 
-```json
+```
 Name already Exist
 
 ```
@@ -68,7 +68,7 @@ Name already Exist
 example 
 
 
-```json
+```
 "name" length must be at least 6 characters long
 "email" must be a valid email
 "password" length must be at least 6 characters long
@@ -111,7 +111,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTE0NjU0ZDc3ZjlhNTRlMDBmMDU3Nzc
 
 if Email or password is wrong 
 
-```json
+```
 
 "email" must be a valid email
 "password" length must be at least 6 characters long
@@ -126,14 +126,14 @@ Email is wrong
 
 in this private route admin users can see if there admins , and normal users can see if there normal and if you are not authenticated you will get a error
 
-```json
+```
 GET http://localhost:3000/api/priv
 
 ```
 
 auth-token ( JWT token got from login ) should be in header 
 
-```json
+```
 
 auth-token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTE0NjU0ZDc3ZjlhNTRlMDBmMDU3NzciLCJuYW1lIjoidGhlYWRtaW4iLCJlbWFpbCI6InJvb3RAZGFzaXRoLndvcmtzIiwiaWF0IjoxNjI4NzI3NjY5fQ.PFJldSFVDrSoJ-Pg0HOxkGjxQ69gxVO2Kjn7ozw9Crg
 
@@ -172,7 +172,7 @@ auth-token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTE0NjU0ZDc3ZjlhNT
 
 <u> If you are not Verified </u>
 
-```json
+```
 Access Denied
 
 ```
