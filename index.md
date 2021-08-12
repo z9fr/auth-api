@@ -32,7 +32,7 @@ example json data
 
 ```
 
-#### responses 
+#### Responses 
 
 <u> Success </u>
 
