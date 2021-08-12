@@ -43,6 +43,10 @@ example json data
 }
 
 ```
+
+<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/createacc.png'>
+
+
 <u> Email Exist  </u>
 
 
