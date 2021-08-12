@@ -174,4 +174,4 @@ Access Denied
 
 ```
 
-<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/noaccess.png '>
+<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/noaccess.png'>
