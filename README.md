@@ -3,7 +3,7 @@ title: API Authentication With JWT
 author: dasith vidanage
 ---
 
-nodejs Authentication API with nodejs, mongodb, and JWT tokens.
+nodejs Authentication API with nodejs, mongodb, and JWT.
 
 ### install 
 
@@ -12,7 +12,7 @@ npm install
 npm start
 
 ```
-
+( please add mongo con string to .env file )
 
 ### Register User 
 
@@ -103,6 +103,8 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTE0NjU0ZDc3ZjlhNTRlMDBmMDU3Nzc
 
 ```
 
+<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/login.png'>
+
 
 if Email or password is wrong 
 
@@ -147,6 +149,8 @@ auth-token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTE0NjU0ZDc3ZjlhNT
 
 ```
 
+<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/adminrole.png'>
+
 
 <u> If you are normal user  </u>
 
@@ -161,9 +165,13 @@ auth-token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTE0NjU0ZDc3ZjlhNT
 
 ```
 
+<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/rolenormaluser.png'>
+
 <u> If you are not Verified </u>
 
 ```
 Access Denied
 
 ```
+
+<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/noaccess.png '>
