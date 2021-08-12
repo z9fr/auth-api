@@ -83,53 +83,6 @@ POST http://localhost:3000/api/user/login
 
 ```
 
-
-
-
-
-
-
-
-
-we can maybe provice the api key inside the headers o
-
-```
-apikey: {API-KEY}
-```
-or else we can use the token for authenticate 
-
-### response 
-
-```
-[
-   {
-      "id": "e-1",
-      "title": "example event",
-      "description": "Something",
-      "public": "yes",
-      "members": [String]
-   }
-]
-
-```
-
-## check if event exist 
-
-to check if the event exist or not 
-
-```
-GET /api/eventexist/{eventid}
-```
-
-we can authetnticate user using the token or we can use a api key 
-
-#### Example response 
-```
-{
-   "eventexist": true
-}
-```
-
 example json data
 
 ```
@@ -159,7 +112,7 @@ Email is wrong
 
 ```
 
-
+---
 
 ### Access Private Route 
 
