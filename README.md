@@ -44,7 +44,7 @@ example json data
 
 ```
 
-<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/createacc.png?token=AP6ULZTGF4X6SC46OD2F7D3BDWTC6'>
+<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/createacc.png'>
 
 
 <u> Email Exist  </u>
