@@ -1,37 +1,180 @@
-## Welcome to GitHub Pages
+---
+title: API Authentication With JWT
+author: dasith vidanage
+---
 
-You can use the [editor on GitHub](https://github.com/dasithsv/API-Authentication-With-JWT/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Authentication API with nodejs, mongodb, and JWT.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### install 
 
-### Markdown
+```bash
+npm install
+npm start
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```
+( please add mongo con string to .env file )
 
-```markdown
-Syntax highlighted code block
+### Register User 
 
-# Header 1
-## Header 2
-### Header 3
+```json
+POST http://localhost:3000/api/user/register
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+example json data
 
-### Jekyll Themes
+```json
+{
+    "name" : "theadmin",
+    "email" : "root@dasith.works",
+    "password" : "Kekc8swFgD6zU"
+}
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dasithsv/API-Authentication-With-JWT/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```
 
-### Support or Contact
+#### responses 
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<u> Success </u>
+
+
+```json
+{
+    "user": "theadmin"
+}
+
+```
+
+<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/createacc.png'>
+
+
+<u> Email Exist  </u>
+
+
+```json
+Email already Exist
+
+```
+
+<u> Name Exist  </u>
+
+
+```json
+Name already Exist
+
+```
+
+<u> length of charactors should be more than 6 digits and email should be valid email or else , it will gives you an error </u>
+
+example 
+
+
+```json
+"name" length must be at least 6 characters long
+"email" must be a valid email
+"password" length must be at least 6 characters long
+
+```
+
+
+---
+
+
+### Login User 
+
+```
+POST http://localhost:3000/api/user/login
+
+```
+
+example json data
+
+```json
+{
+    "email" : "root@dasith.works",
+    "password" : "yourpasswordhere"
+}
+
+```
+
+if success you will get a JWT token 
+
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTE0NjU0ZDc3ZjlhNTRlMDBmMDU3NzciLCJuYW1lIjoidGhlYWRtaW4iLCJlbWFpbCI6InJvb3RAZGFzaXRoLndvcmtzIiwiaWF0IjoxNjI4NzI3NjY5fQ.PFJldSFVDrSoJ-Pg0HOxkGjxQ69gxVO2Kjn7ozw9Crg
+
+```
+
+
+<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/login.png'>
+
+<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/Screenshot from 2021-08-12 06-16-38.png'>
+
+
+if Email or password is wrong 
+
+```json
+
+"email" must be a valid email
+"password" length must be at least 6 characters long
+Password is wrong
+Email is wrong
+
+```
+
+---
+
+### Access Private Route 
+
+in this private route admin users can see if there admins , and normal users can see if there normal and if you are not authenticated you will get a error
+
+```json
+GET http://localhost:3000/api/priv
+
+```
+
+auth-token ( JWT token got from login ) should be in header 
+
+```json
+
+auth-token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTE0NjU0ZDc3ZjlhNTRlMDBmMDU3NzciLCJuYW1lIjoidGhlYWRtaW4iLCJlbWFpbCI6InJvb3RAZGFzaXRoLndvcmtzIiwiaWF0IjoxNjI4NzI3NjY5fQ.PFJldSFVDrSoJ-Pg0HOxkGjxQ69gxVO2Kjn7ozw9Crg
+
+```
+
+
+<u> if you are the admin you will get </u>
+
+```json
+{
+    "role": {
+        "role": "you are admin",
+        "desc": "this is only for admin"
+    }
+}
+
+```
+
+<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/adminrole.png'>
+
+
+<u> If you are normal user  </u>
+
+
+```json
+{
+    "role": {
+        "role": "you are normal user",
+        "desc": "<user name>
+    }
+}
+
+```
+
+<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/rolenormaluser.png'>
+
+<u> If you are not Verified </u>
+
+```json
+Access Denied
+
+```
+
+<img src='https://raw.githubusercontent.com/dasithsv/API-Authentication-With-JWT/main/images/noaccess.png'>
