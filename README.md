@@ -1,6 +1,6 @@
 ---
 title: API Authentication With JWT
-author: dasith vidanage
+author: 4ugury
 ---
 
 Authentication API with nodejs, mongodb, and JWT.
